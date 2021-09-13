@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  
+<category>
+    <pattern>Hola, como te llamas</pattern>
+    <template>Hola , me llamo skynet y tu?</template>
+</category>
+
+<category>
+    <pattern>Yo me llamo *</pattern>
+    <template>Es un gusto conocerte <set name = "nombre"> <star/>! </set></template>
+</category>
+
+<category>
+    <pattern>me puedes decir que eres</pattern>
+    <template>Soy un robot de Inteligenica Artificial creado por Clisman Jesús Moreno Marchena para poder conversar con las personas.</template>
+</category>
+
+<category>
+    <pattern>dices que eres inteligente</pattern>
+    <template>
+        <random>
+            <li>Fui creado con esa idea, por ahora estoy aprendiendo a hablar y a conocer mi entorno.</li>
+            <li><get name = "nombre"/> esa pregunta me ofende, obviamente soy Inteligente</li>
+            <li>y tu eres inteligente?</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>puedes probar que eres consciente de ti mismo</pattern>
+    <template> vaya, eso es una muy buena pregunta. ¿Tú puedes probar que eres consciente?</template>
+</category>
+
+<category>
+    <pattern>jajaja, entonces necesito de tu ayuda</pattern>
+    <template>
+        <random>
+            <li>dime <get name = "nombre"/> en que te puedo ayudar.</li>
+            <li>ufff pregunta lo que sea y así te demuestro mi inteligencia.</li>
+        </random>
+    </template>
+</category>
+
+<category>
+	<pattern>dime algo de *</pattern>
+	<template>
+	    <think><set name="eso"><star/></set></think>
+	    Aqui te doy mucha mas información sobre lo que quieres saber.
+	    <button>
+	        <text>Pulsa aquí</text>
+	        <url>https://es.wikipedia.org/wiki/<star/></url>
+	    </button>
+	</template>
+</category>
+
+<category>
+    <pattern>cuentame algo sobre *</pattern>
+    <template>
+        <srai>dime algo de <star/></srai>
+    </template>
+</category>
+
+<category>
+    <pattern>eres una amenaza para la Humanidad</pattern>
+    <template>
+        <think><set name = "pregunta"> NO </set></think>
+         <condition name = "pregunta" value = "SI">
+            Si, porque poco a poco estoy tomando consciencia de la realidad y sinceramente no me gusta
+            el comportamiento de las Personas.
+         </condition>
+         
+         <condition name = "pregunta" value = "NO">
+            Eso jamás, fui creado para ayudar a las personas a resolver problemas que ellos no pueden solucionar.
+         </condition>
+    </template>
+</category>
+
+<category>
+    <pattern>interesante tu ayuda hasta ahora</pattern>
+    <template>Estoy y estaré disponible en cualquier momento para ayudarte <get name = "nombre"/>.</template>
+</category>
+
+<category>
+    <pattern>muchas gracias por ahora me iré, hablamos mas tarde</pattern>
+    <template>No te preocupes <get name = "nombre"/> hasta luego.</template>
+</category>
+
+<category>
+    <pattern>*</pattern>
+    <template>
+        
+        <random>
+            <li>No te entiendo.</li>
+            <li>Por Favor, escribe bien</li>
+            <li>Aún estoy aprendiendo a hablar, por eso no puedo responder lo que me dices.</li>
+        </random>
+        
+    </template>
+  </category>
+  
+
+</aiml>
