@@ -13,4 +13,4 @@ cuentame algo sobre *
 
 los * representa cualquier palabra, lo cual el bot te busca el wikipedia de lo que quieres saber.
 
-El chatbot se encunetra en la carpeta Files.
+El chatbot se encunetra en la carpeta Files y fue desarrollado en https://home.pandorabots.com/home.html
